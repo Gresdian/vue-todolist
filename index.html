@@ -30,10 +30,19 @@
                             <h1 class="text-center mb-3">Travelist</h1>
                             <ul class="list-unstyled list-group list-group-flush">
                                 <li class="list-group-item list-group-item-info my-1" 
-                                v-for="(todo,index) in tasks" 
-                                :key="index"
-                                :class="todo.done ? 'text-decoration-line-through' : ''"
-                                @click="toggleDone(index)">  {{ todo.text }}</li>
+                                   v-for="(todo,index) in tasks" 
+                                   :key="index"
+                                   :class="todo.done ? 'text-decoration-line-through' : ''"
+                                   @click="toggleDone(index)"> 
+                                   <div class="d-flex justify-content-between px-3">
+                                       <span>
+                                           {{ todo.text }}
+                                       </span>
+                                       <div class="buttons">
+                                            <button class="btn btn-square btn-danger" @click="removeTodo(index)"><i class="fas fa-xmark"></i></button>
+                                       </div>
+                                   </div>
+                                </li>
                             </ul>
                         </div>
                     </div>

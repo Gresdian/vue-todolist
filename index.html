@@ -44,6 +44,10 @@
                                    </div>
                                 </li>
                             </ul>
+                            <div class="add-task d-flex justify-content-between mt-5">
+                                <input type="text" class="form-control w-75" placeholder="Aggiungi una nuova task" v-model="text_task">
+                                <button class="btn btn-success" @click="addTask">Add Task</button>
+                            </div>
                         </div>
                     </div>
                 </div>

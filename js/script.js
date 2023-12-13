@@ -3,26 +3,27 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            text_task: '',
             tasks : [
                 {
                     text: 'Preparare la valigia',
-                    done: true,
+                    done: false,
                 },
                 {
                     text: 'Stampare biglietto',
-                    done: true,
+                    done: false,
                 },
                 {
                     text: 'Portare scarpe comode',
-                    done: true,
+                    done: false,
                 },
                 {
                     text: 'Ricordarsi lo spazzolino',
-                    done: true,
+                    done: false,
                 },
                 {
                     text: 'Comprare crema solare',
-                    done: true,
+                    done: false,
                 },
             ]
         }
@@ -33,6 +34,16 @@ createApp({
         },
         removeTodo(index){
             this.tasks.splice(index,1);
+        },
+        addTask(){
+           let obj = {
+            text: this.text_task,
+            done: false,
+
+        }
+        
+        this.tasks.push(obj);
+        this.text_task = '';
         }
     },
 }).mount('#app');

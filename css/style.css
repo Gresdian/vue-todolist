@@ -19,5 +19,11 @@ header{
 
 li{
     padding: 15px 0;
-    
+}
+span{
+    cursor: pointer;
+}
+
+.add-task{
+    display: flex;
 }

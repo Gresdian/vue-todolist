@@ -36,7 +36,7 @@ createApp({
             this.tasks.splice(index,1);
         },
         addTask(){
-           let obj = {
+            let obj = {
             text: this.text_task,
             done: false,
 

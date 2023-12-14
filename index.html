@@ -39,7 +39,8 @@
                                            {{ todo.text }}
                                        </span>
                                        <div class="buttons">
-                                            <button class="btn btn-square btn-danger" @click="removeTodo(index)"><i class="fas fa-xmark"></i></button>
+                                            <button class="btn btn-square btn-danger mx-1" @click="removeTodo(index)"><i class="fas fa-xmark"></i></button>
+                                            <button class="btn btn-square mx-1" :class="todo.done ? 'btn-primary' : 'btn-dark'" @click="toggleDone(index)"><i class="fas" :class="todo.done ? 'fa-check' : 'fa-times'"></i></button>
                                        </div>
                                    </div>
                                 </li>

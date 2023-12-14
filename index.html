@@ -32,15 +32,14 @@
                                 <li class="list-group-item list-group-item-info my-1" 
                                    v-for="(todo,index) in tasks" 
                                    :key="index"
-                                   :class="todo.done ? 'text-decoration-line-through' : ''"
-                                   @click="toggleDone(index)"> 
+                                   :class="todo.done ? 'text-decoration-line-through' : ''"> 
                                    <div class="d-flex justify-content-between px-3">
-                                       <span>
+                                       <span @click="toggleDone(index)">
                                            {{ todo.text }}
                                        </span>
                                        <div class="buttons">
                                             <button class="btn btn-square btn-danger mx-1" @click="removeTodo(index)"><i class="fas fa-xmark"></i></button>
-                                            <button class="btn btn-square mx-1" :class="todo.done ? 'btn-primary' : 'btn-dark'" @click="toggleDone(index)"><i class="fas" :class="todo.done ? 'fa-check' : 'fa-times'"></i></button>
+                                            <button class="btn btn-square mx-1" :class="todo.done ? 'btn-primary' : 'btn-dark'" @click="toggleDone(index)" ><i class="fas" :class="todo.done ? 'fa-check' : 'fa-times'"></i></button>
                                        </div>
                                    </div>
                                 </li>
